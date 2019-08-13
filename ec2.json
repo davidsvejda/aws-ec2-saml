@@ -1,0 +1,34 @@
+{
+  "Meta": {
+    "Owner":"876913053759"
+  },
+  "User-data": {
+    "RHEL6-DEV":"https://bitbucket.example.com/bitbucket/users/svejda/repos/scripts/raw/dev.rhel6.aws.sh",
+    "RHEL7-DEV":"https://bitbucket.example.com/bitbucket/users/svejda/repos/scripts/raw/dev.rhel7.aws.sh",
+    "RHEL7-TEST":"https://bitbucket.example.com/bitbucket/users/svejda/repos/scripts/raw/user_data.sh",
+    "RHEL7-PROD":"https://bitbucket.example.com/bitbucket/users/svejda/repos/scripts/raw/prod.rhel7.aws.sh"
+  },
+  "InstanceType": {
+    "t2.micro":"t2.micro (1 vCPU, 1GB RAM)",
+    "t2.medium":"t2.medium (2 vCPU, 4GB RAM)",
+    "t2.large":"t2.large (2 vCPU, 8GB RAM)"
+  },
+  "Networking": {
+    "Network":"vpc-17ue49fv",
+    "Subnet":"subnet-13274172",
+    "SecurityGroup":"sg-12x22w2b"
+  },
+  "Key": {
+    "Keyname":"awsapiuser01_eu_west"
+  },
+  "Tags": {
+      "Environment":"X01",
+      "OSType":"Linux",
+      "Owner":"John Doe",
+      "APPType":"Amazon Elastic Compute Cloud",
+      "BillingContact":"Doe",
+      "ClarityID":"98987655",
+      "CostCenter":"38749234",
+      "SchedulerID":"X01-WRKDAYS&HOURS_GMT"
+    }
+}
