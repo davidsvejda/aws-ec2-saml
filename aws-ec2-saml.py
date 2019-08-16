@@ -437,34 +437,20 @@ try:
         TagSpecifications=[
             {
                 'ResourceType': 'instance',
-                'Tags': [
-                        {'Key':'Environment','Value':cfg['Tags']['Environment']},
-                        {'Key':'OSType','Value':cfg['Tags']['OSType']},
-                        {'Key':'Owner','Value':cfg['Tags']['Owner']},
-                        {'Key':'APPType','Value':cfg['Tags']['APPType']},
-                        {'Key':'BillingContact','Value':cfg['Tags']['BillingContact']},
-                        {'Key':'ClarityID','Value':cfg['Tags']['ClarityID']},
-                        {'Key':'CostCenter','Value':cfg['Tags']['CostCenter']},
-                        {'Key':'SchedulerID','Value':cfg['Tags']['SchedulerID']},
-                        {'Key':'TerminationDate','Value':aws_termination_date},
-                        {'Key':'Name','Value':aws_instance_name}
-                        ]
+                'Tags': [{"Key": k, 'Value': v} for k, v in cfg['Tags'].items()] + [
+                    {'Key':'TerminationDate','Value':aws_termination_date},
+                    {'Key':'Name','Value':aws_instance_name}
+                ]
+
             },
             {
                 'ResourceType': 'volume',
-                'Tags': [
-                        {'Key':'Environment','Value':cfg['Tags']['Environment']},
-                        {'Key':'OSType','Value':cfg['Tags']['OSType']},
-                        {'Key':'Owner','Value':cfg['Tags']['Owner']},
-                        {'Key':'APPType','Value':cfg['Tags']['APPType']},
-                        {'Key':'BillingContact','Value':cfg['Tags']['BillingContact']},
-                        {'Key':'ClarityID','Value':cfg['Tags']['ClarityID']},
-                        {'Key':'CostCenter','Value':cfg['Tags']['CostCenter']},
-                        {'Key':'SchedulerID','Value':cfg['Tags']['SchedulerID']},
-                        {'Key':'TerminationDate','Value':aws_termination_date},
-                        {'Key':'Name','Value':aws_instance_name}
-                        ]
+                'Tags': [{"Key": k, 'Value': v} for k, v in cfg['Tags'].items()] + [
+                    {'Key':'TerminationDate','Value':aws_termination_date},
+                    {'Key':'Name','Value':aws_instance_name}
+                ]
             }
+
         ]
 )
 
